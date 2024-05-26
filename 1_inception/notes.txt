@@ -1,0 +1,3 @@
+Browsers already know about innerHTML, getElementById etc because it has a javascript engine. But on the other hand, it does not know what react is. So we need to get react into our project. 
+First way to get react into our project is via CDN. 
+CDN stands for Content Delivery Network, which is a network of servers that are spread out across the world to speed up the delivery of web content. React has also been hosted here and we are just pulling react into our website, by embedding the react cdn link in out project.
