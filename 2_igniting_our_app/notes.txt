@@ -9,4 +9,16 @@ We will use parcel in our app. It is one of the best bundlers out there which wi
 so we will install the parcel package from npm by doing 'npm i -D parcel'. The -D is because we want to install the parcel package as a dev dependency.
 '^' in front of the version of dependencies in our package.json means that if whenever a minor new version is released, it will automatically upgrade to the latest version. But if a major new version is released, it won't. for that we need to use '~' instead of '^'.
 package-lock.json keeps a track of the exact version of all the packages that are being used.
-node_modules is the actual place where all the code for our dependencies lie. Its like a database. 
+node_modules is the actual place where all the code for our dependencies lie. Its like a database.
+Build the app using 'npx parcel index.html'. This creates a server for us and hosts the code on that server(localhost:1234)🚀.
+NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript packages without installing them.
+Now, the second way to get react to our project is via npm. And this is the recommended way rather than bringing it via cdn link because of an unnecessary network call in case of cdn. So, do 'npm i react react-dom'.
+Also, now import React and ReactDOM into the App.js.
+Now, as soon as we start the app using parcel, we will run into error. Its because in our index.js file, we are injecting this App.js file. So, its treating the App.js file as a normal js file and as you know, there is no import in js. So, we need to specify the type as module in that script tag for App.js.
+
+Some things about Parcel :-
+👉 does dev build for us.
+👉 creates a server for us and hosts the code on that server
+👉 Does HMR (hot module replacement) : improves the development experience by automatically updating modules in the browser at runtime without needing a whole page refresh. This means that application state can be retained as you change small things.
+👉 It uses a file watching algorithm (written in c++).
+👉 Gives faster builds as it does caching.
