@@ -6,3 +6,7 @@ Now, we can start importing packages/dependencies into our project.
 The most important package is a bundler (ex. parcel, webpack, vite). A bundler bundles our app so that it can be shipped into production.
 When we do create-react-app, it behind the scenes uses webpack bundler.
 We will use parcel in our app. It is one of the best bundlers out there which will ignite our app.
+so we will install the parcel package from npm by doing 'npm i -D parcel'. The -D is because we want to install the parcel package as a dev dependency.
+'^' in front of the version of dependencies in our package.json means that if whenever a minor new version is released, it will automatically upgrade to the latest version. But if a major new version is released, it won't. for that we need to use '~' instead of '^'.
+package-lock.json keeps a track of the exact version of all the packages that are being used.
+node_modules is the actual place where all the code for our dependencies lie. Its like a database. 
