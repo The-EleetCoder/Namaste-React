@@ -6,19 +6,20 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="root"></div>
+    
     <!-- printing hello world using html h1 tag -->
     <h1>hello world</h1>
 
-    <div id="root"></div>
-
     <!-- printing hello world using javascript -->
-    <script>
+    <!-- <script>
       const root = document.getElementById("root");
       const heading = document.createElement("h1");
       heading.innerHTML = "Hello, world! using javascript";
       root.appendChild(heading);
-    </script>
+    </script> -->
 
+    <!-- importing react throuch cdn -->
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -27,5 +28,12 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
+
+    <!-- printing hello world using react -->
+    <script>
+      const heading = React.createElement('h1',{},'Hello, world! using React');
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(heading);
+    </script>
   </body>
 </html>
