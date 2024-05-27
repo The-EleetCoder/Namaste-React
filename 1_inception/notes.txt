@@ -5,3 +5,4 @@ The most costly operation inside a webpage is to manipulate the DOM, ie, adding 
 React comes with a philosophy that whenever you need to do anything inside a web page, do it using javascript. 
 when we use React.createElement, it makes an object, not the html element itself. Afterwards, when we use the render function, it then converts the object to the actual HTML element.
 Using react.createElement for nested elements will be very complex, hence we use something known as jsx.
+React is a library and not a framework as it can work indepently in a small portion of your app.
