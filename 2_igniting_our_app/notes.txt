@@ -1,0 +1,8 @@
+npm is a standard repository for all the packages. Its the biggest package manager. All the packages are hosted over there.
+npm is a node package manager but its not the full form of npm 😅.
+Now, to bring npm in our project, we do 'npm init'.
+package.json is the configuration file for our node package that we just creaated using npm init.
+Now, we can start importing packages/dependencies into our project.
+The most important package is a bundler (ex. parcel, webpack, vite). A bundler bundles our app so that it can be shipped into production.
+When we do create-react-app, it behind the scenes uses webpack bundler.
+We will use parcel in our app. It is one of the best bundlers out there which will ignite our app.
