@@ -4,3 +4,4 @@ CDN stands for Content Delivery Network, which is a network of servers that are 
 The most costly operation inside a webpage is to manipulate the DOM, ie, adding or removing elements in the DOM tree. So, all the frameworks and libraries, including React, tries to optimise this.
 React comes with a philosophy that whenever you need to do anything inside a web page, do it using javascript. 
 when we use React.createElement, it makes an object, not the html element itself. Afterwards, when we use the render function, it then converts the object to the actual HTML element.
+Using react.createElement for nested elements will be very complex, hence we use something known as jsx.
