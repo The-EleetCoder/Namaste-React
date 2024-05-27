@@ -22,3 +22,16 @@ Some things about Parcel :-
 👉 Does HMR (hot module replacement) : improves the development experience by automatically updating modules in the browser at runtime without needing a whole page refresh. This means that application state can be retained as you change small things.
 👉 It uses a file watching algorithm (written in c++).
 👉 Gives faster builds as it does caching.
+👉 Image optimisation
+👉 Minification
+👉 Bundles our code
+👉 compress our code
+👉 consistent hashing
+👉 code splitting
+👉 Differential bundling - to support older versions of browsers
+👉 Good error handling with diagnostics
+👉 Tree shaking - removes unused code from our files.
+👉 different dev and production bundles.
+
+To make a production ready app, use 'npx parcel build index.html' and remove the main from package.json.
+Now, we need to tell our app which browsers it should support. We do that by adding 'browserslist' in our package.json.

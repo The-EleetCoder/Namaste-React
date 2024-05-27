@@ -65,7 +65,7 @@
 97D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\react-error-overlay133612771849536541 1
 127D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\@swc\helpers\cjs\_is_native_reflect_construct.cjs133612771849516472 0
 131D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\@parcel\rust\parcel-node-bindings.linux-x64-musl.node133612772068268652 0
-74D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\notes.txt133612930597380386 0
+74D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\notes.txt133613015801869917 0
 91D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\svgo\bin\svgo133612771836994561 0
 129D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\css-select\node_modules\domutils\lib\esm\feeds.d.ts133612771880513535 0
 116D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\cosmiconfig\dist\getDirectory.d.ts.map133612771841172177 0
@@ -74,7 +74,7 @@
 77D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules133612919618455263 1
 97D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\is-json\.travis.yml133612771837445567 0
 84D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\dotenv133612771852199198 1
-77D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\package.json133612919618950321 0
+77D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\package.json133613016317216685 0
 86D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\entities133612771839946476 1
 82D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\.bin133612914890791512 1
 117D:\Development\Web_Dev\Frontend\namaste-react\2_igniting_our_app\node_modules\caniuse-lite\data\features\css-table.js133612771853741473 0
