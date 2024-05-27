@@ -4,6 +4,8 @@
   "description": "This is namaste react.",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "Jai Jain",
@@ -16,7 +18,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "browserslist":[
+  "browserslist": [
     "last 2 versions"
   ]
 }
