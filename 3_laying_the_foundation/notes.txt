@@ -14,3 +14,6 @@ And its babel's job to convert jsx code to react.createElement.
 
 When we write attributes in our jsx, we do it in camelCase.
 If we our writing our jsx in multiple lines, we need to wrap it in ().
+React functional component is nothing but a normal javascript function which returns some jsx element.
+Component composition : when a component is rendered within a component.
+If we want to write js code inside the react component, we need to wrap the js code inside {}.
