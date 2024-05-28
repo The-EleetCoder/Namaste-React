@@ -1,0 +1,1 @@
+React element is not an html element. React element is an object. when we render this element on the DOM, it becomes an html element.
