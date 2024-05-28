@@ -1,1 +1,13 @@
 React element is not an html element. React element is an object. when we render this element on the DOM, it becomes an html element.
+React can be written without using jsx also. But we use jsx to make things easy.
+JSX, or JavaScript XML, is a syntax extension for JavaScript that lets you write HTML-like code in JavaScript files. It's similar to HTML, but with some differences. JSX is used to define the structure and logic of user interfaces in React components.
+
+react element using core react ---> const heading = React.createElement("h1",{id: "heading"}, "Namaste React 🚀");
+react element using jsx ---> const jsxHeading = <h1 id='heading'>Namaste React using jsx 🚀</h1>
+
+Our browser's js engine cannot understand the jsx code. So, the jsx code is transpiled into a code that browser understands, before it reaches the js engine. And this transpilation is done by the bundler which we are using, in this case Parcel. Parcel uses Babel behind the scenes to do this job.
+
+This is how the transpilation flow goes ---> 
+jsx --> react.createElement-(JS object) --> HTMLelement(render)
+
+And its babel's job to convert jsx code to react.createElement.
