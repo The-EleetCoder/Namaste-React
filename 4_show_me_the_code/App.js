@@ -1,29 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// react element using core react
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Namaste React 🚀"
-);
+/*
+Basic layout of the app
 
-// react element using jsx
-const jsxHeading = <h1 id="heading">Namaste React using jsx 🚀</h1>;
+- Header
+  - Logo
+  - Nav items
+- Body
+  - Search
+  - Restaurant Container
+    - Restaurant Card
+- Footer
+  - Copyrights
+  - links
+  - address
+  - contact
 
-// react functional component
-const Title = () => {
-  return <h1>Title component 🚀</h1>;
-};
+*/
 
-const HeadingComponent = () => {
+const Header = () => {
   return (
-    <>
-      <Title />
-      <h1>Namaste React functional component 🚀</h1>
-    </>
-  );
-};
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://cdn.dribbble.com/userupload/4288549/file/original-438b97178ade9d02cb34fd941adc6357.jpg?resize=400x300&vertical=center" />
+      </div>
+
+      <div className="nav-items">
+        <ul>
+          <li>home</li>
+          <li>about us</li>
+          <li>contact us</li>
+          <li>cart</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+const AppLayout = ()=>{
+  return (
+    <div className="app">
+      <Header/>
+    </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent/>);
+root.render(<AppLayout/>);
