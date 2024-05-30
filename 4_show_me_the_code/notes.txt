@@ -1,1 +1,4 @@
 We are building a food ordering app.
+Passing a prop to a component is just like passing an argument to a function.
+Prop is nothing but an object.
+Config driven UI : controlling your ui using data, which comes from backend.
