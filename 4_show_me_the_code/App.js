@@ -11,6 +11,8 @@ Basic layout of the app
   - Search
   - Restaurant Container
     - Restaurant Card
+      - Img
+      - name of Res, Star Rating, Cuisine, time
 - Footer
   - Copyrights
   - links
@@ -23,7 +25,10 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Symbol.png" />
+        <img
+          className="logo"
+          src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Symbol.png"
+        />
       </div>
 
       <div className="nav-items">
@@ -35,16 +40,52 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const AppLayout = ()=>{
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <img
+        alt="res-logo"
+        className="res-logo"
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/972a37599772cdc7df93a0855ad87591"
+      />
+      <div className="res-details">
+        <h3>Meghana Foods</h3>
+        <h4>Burgers, fries, drinks</h4>
+        <h4>4.4 Stars</h4>
+        <h4>38 minutes</h4>
+      </div>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
   return (
     <div className="app">
-      <Header/>
+      <Header />
+      <Body />
     </div>
-  )
-}
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
+root.render(<AppLayout />);
