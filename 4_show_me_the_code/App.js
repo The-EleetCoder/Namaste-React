@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="https://cdn.dribbble.com/userupload/4288549/file/original-438b97178ade9d02cb34fd941adc6357.jpg?resize=400x300&vertical=center" />
+        <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Symbol.png" />
       </div>
 
       <div className="nav-items">
