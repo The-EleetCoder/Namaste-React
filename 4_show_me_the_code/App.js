@@ -1574,16 +1574,17 @@ const Header = () => {
 };
 
 const RestaurantCard = ({ data }) => {
+  let { cuisines, name, cloudinaryImageId, avgRating, sla } = data?.info;
+
   const imageBaseURL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-  let cuisine = data.info.cuisines.join(", ");
-  let resName = data.info.name;
+  let cuisine = cuisines.join(", ");
 
   if (cuisine.length > 32) {
     cuisine = `${cuisine.substring(0, 30)}...`;
   }
-  if (resName.length > 32) {
-    resName = `${resName.substring(0, 25)}...`;
+  if (name.length > 32) {
+    name = `${name.substring(0, 25)}...`;
   }
 
   return (
@@ -1591,16 +1592,13 @@ const RestaurantCard = ({ data }) => {
       <img
         alt="res-logo"
         className="res-logo"
-        src={`${imageBaseURL}${data.info.cloudinaryImageId}`}
+        src={`${imageBaseURL}${cloudinaryImageId}`}
       />
       <div className="res-details">
-        <p className="res-name">{resName}</p>
-        <div
-          style={{ display: "flex", gap: "1em" }}
-          className="res-rating-time-div"
-        >
-          <p className="res-avg-rating">{data.info.avgRating}</p>
-          <p className="res-delivery-time">{data.info.sla.slaString}</p>
+        <p className="res-name">{name}</p>
+        <div className="res-rating-time-div">
+          <p className="res-avg-rating">{avgRating}</p>
+          <p className="res-delivery-time">{sla.slaString}</p>
         </div>
         <p className="res-cuisine">{cuisine}</p>
       </div>

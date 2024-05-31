@@ -40,12 +40,12 @@ body {
 .res-card {
   width: 273px;
   height: 284px;
-  background-color: #f0f0f093;
+  /* background-color: #f0f0f093; */
   padding: 5px;
   display: flex;
   flex-direction: column;
   margin: 5px;
-  border-radius: 0.2em;
+  border-radius: 1.5em;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   gap: 0.5em;
 }
@@ -88,12 +88,14 @@ body {
 
 .res-name {
   font-weight: 600;
-  font-size: 1.08em;
+  font-size: 1.1em;
 }
 
 .res-rating-time-div {
+  display: flex;
+  gap: 1em;
   font-weight: 500;
-  font-size: 0.98em;
+  font-size: 0.96em;
 }
 
 .res-cuisine {
