@@ -2,3 +2,5 @@ We are building a food ordering app.
 Passing a prop to a component is just like passing an argument to a function.
 Prop is nothing but an object.
 Config driven UI : controlling your ui using data, which comes from backend.
+The key prop is a unique identifier that React uses to efficiently manage and update elements within a list. When rendering a list of elements, it is crucial to assign a unique key to each element to help React differentiate between the items and perform updates more efficiently.
+Its recommended not to use index as keys.
