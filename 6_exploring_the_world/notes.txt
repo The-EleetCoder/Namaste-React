@@ -1,0 +1,12 @@
+There are two types of exports: default export and named export. There can be only one default export in a file. named exports are used when there are more than one things to be exported.
+A Hook is a normal js function which is given to us by react.
+Hooks keep the UI layer in sync with the data layer.
+Whenever a state variable updates, react re renders the component.
+Virtual DOM is an object representation of actual DOM.
+
+🚀 Why is react fast?
+Its fast because it does efficient DOM manipulation.
+React uses a diff algorithm (aka React Fiber) to find out the difference between the updated virtual dom and the previous virtual dom, and then actually update the Real dom.
+Finding out the difference between 2 HTML codes(A-DOM) is very expensive as compared to finding out the difference between 2 js objects(V-DOM).
+Whenever there is a change in any state variable, react will find out the difference between virtual doms and will re-render our component, i.e., it will update the DOM.
+This is the core of react.
