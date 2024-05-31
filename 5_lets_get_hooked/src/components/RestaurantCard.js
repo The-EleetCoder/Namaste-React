@@ -2,8 +2,6 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ data }) => {
   let { cuisines, name, cloudinaryImageId, avgRating, sla } = data?.info;
-
-  const imageBaseURL = CDN_URL;
   let cuisine = cuisines.join(", ");
 
   if (cuisine.length > 32) {
@@ -18,7 +16,7 @@ const RestaurantCard = ({ data }) => {
       <img
         alt="res-logo"
         className="res-logo"
-        src={`${imageBaseURL}${cloudinaryImageId}`}
+        src={`${CDN_URL}${cloudinaryImageId}`}
       />
       <div className="res-details">
         <p className="res-name">{name}</p>
