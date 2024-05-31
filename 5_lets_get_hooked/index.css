@@ -12,11 +12,18 @@ body {
 
 .header {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 1em 10%;
+  box-shadow: rgba(138, 137, 137, 0.1) 0px 10px 10px;
+  position: fixed;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
 }
 
 .logo {
@@ -26,11 +33,7 @@ body {
 .nav-items > ul {
   display: flex;
   list-style-type: none;
-}
-
-.nav-items > ul > li {
-  padding: 10px;
-  margin: 10px;
+  gap: 2em;
 }
 
 .search {
@@ -84,6 +87,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 6em;
 }
 
 .res-name {
@@ -109,7 +113,6 @@ body {
   width: 100%;
   justify-content: center;
   gap: 2em;
-  margin-top: 1em;
   align-items: center;
 }
 
