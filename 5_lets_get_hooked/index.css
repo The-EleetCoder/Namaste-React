@@ -102,3 +102,25 @@ body {
   font-size: 0.95em;
   color: rgba(40, 37, 37, 0.659);
 }
+
+.body-top{
+  display: flex;
+  max-width: 1143px;
+  width: 100%;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+  align-items: center;
+}
+
+.filter-btn{
+  border: none;
+  padding: 0.5em;
+  height: 50%;
+  border-radius: 0.3em;
+  background-color: #ff5c1c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+}
