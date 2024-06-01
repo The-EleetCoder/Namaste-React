@@ -61,7 +61,7 @@ body {
 
 .res-logo {
   width: 100%;
-  height: 182px;
+  height: 65%;
   border-radius: 1em;
   object-fit: cover;
 }
@@ -93,6 +93,7 @@ body {
 .res-name {
   font-weight: 600;
   font-size: 1.1em;
+  letter-spacing: -0.3px;
 }
 
 .res-rating-time-div {

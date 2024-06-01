@@ -7,7 +7,7 @@ const RestaurantCard = ({ data }) => {
   if (cuisine.length > 32) {
     cuisine = `${cuisine.substring(0, 30)}...`;
   }
-  if (name.length > 32) {
+  if (name.length > 30) {
     name = `${name.substring(0, 25)}...`;
   }
 
