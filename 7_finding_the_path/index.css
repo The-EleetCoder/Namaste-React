@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9em 10%;
+  box-shadow: rgba(138, 137, 137, 0.1) 0px 10px 10px;
+  position: fixed;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2em;
+  align-items: center;
+}
+
+.res-card {
+  width: 273px;
+  height: 284px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 1.5em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  gap: 0.5em;
+}
+
+.res-card:hover {
+  transform: scale(0.95);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.res-logo {
+  width: 100%;
+  height: 65%;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+.res-details {
+  height: 30%;
+  width: 100%;
+  font-weight: 400;
+  padding: 0 0.6em;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1143px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+}
+
+.res-name {
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: -0.3px;
+}
+
+.res-rating-time-div {
+  display: flex;
+  gap: 1em;
+  font-weight: 500;
+  font-size: 0.96em;
+}
+
+.res-cuisine {
+  font-size: 0.95em;
+  color: rgba(40, 37, 37, 0.659);
+}
+
+.body-top {
+  display: flex;
+  max-width: 1143px;
+  width: 100%;
+  height: 3.5em;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 0em 1.5em;
+  align-items: center;
+}
+
+.filter-btn {
+  border: none;
+  padding: 0.5em;
+  height: 50%;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+
+  cursor: pointer;
+  color: #7e7873cb;
+  font-weight: 600;
+}
+
+.shimmer-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1143px;
+  margin-top: 3.5em;
+}
+
+.shimmer-card {
+  width: 273px;
+  height: 284px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 1.5em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  gap: 0.5em;
+}
+
+.shimmer-card-image {
+  width: 100%;
+  height: 65%;
+  border-radius: 1em;
+  object-fit: cover;
+  background-color: #eef0f5;
+}
+
+.shimmer-card-details {
+  height: 30%;
+  width: 100%;
+  font-weight: 400;
+  padding: 0 0.6em;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 0.5em;
+}
+
+.shimmer-card-detail-1 {
+  width: 70%;
+  height: 1.2em;
+  background-color: #eef0f5;
+}
+
+.shimmer-card-detail-2 {
+  width: 50%;
+  height: 1.2em;
+  background-color: #eef0f5;
+}
+
+.login-btn {
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+  color: #ff5c1c;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  width: 40%;
+}
+
+.search-btn {
+  border: none;
+  padding: 0.5em;
+  height: 50%;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  cursor: pointer;
+  color: #7e7873cb;
+  font-weight: 600;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  color: #585c65;
+  letter-spacing: 0.1em;
+}
+
+.search-input:focus {
+  outline: #ffffff;
+}
