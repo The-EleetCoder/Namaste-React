@@ -37,10 +37,6 @@ body {
   align-items: center;
 }
 
-.search {
-  padding: 10px;
-}
-
 .res-card {
   width: 273px;
   height: 284px;
@@ -109,29 +105,31 @@ body {
   color: rgba(40, 37, 37, 0.659);
 }
 
-.body-top{
+.body-top {
   display: flex;
   max-width: 1143px;
   width: 100%;
   height: 3.5em;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2em;
+  padding: 0em 1.5em;
   align-items: center;
 }
 
-.filter-btn{
+.filter-btn {
   border: none;
   padding: 0.5em;
   height: 50%;
   border-radius: 0.3em;
   background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+
   cursor: pointer;
   color: #7e7873cb;
   font-weight: 600;
 }
 
-.shimmer-body{
+.shimmer-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,14 +137,14 @@ body {
   margin-top: 6em;
 }
 
-.shimmer-container{
+.shimmer-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1143px;
   margin-top: 3.5em;
 }
 
-.shimmer-card{
+.shimmer-card {
   width: 273px;
   height: 284px;
   padding: 5px;
@@ -158,7 +156,7 @@ body {
   gap: 0.5em;
 }
 
-.shimmer-card-image{
+.shimmer-card-image {
   width: 100%;
   height: 65%;
   border-radius: 1em;
@@ -166,7 +164,7 @@ body {
   background-color: #eef0f5;
 }
 
-.shimmer-card-details{
+.shimmer-card-details {
   height: 30%;
   width: 100%;
   font-weight: 400;
@@ -177,19 +175,19 @@ body {
   gap: 0.5em;
 }
 
-.shimmer-card-detail-1{
+.shimmer-card-detail-1 {
   width: 70%;
   height: 1.2em;
   background-color: #eef0f5;
 }
 
-.shimmer-card-detail-2{
+.shimmer-card-detail-2 {
   width: 50%;
   height: 1.2em;
   background-color: #eef0f5;
 }
 
-.login-btn{
+.login-btn {
   border: none;
   padding: 0.5em;
   border-radius: 0.3em;
@@ -199,4 +197,40 @@ body {
   color: #ff5c1c;
   font-weight: 600;
   font-size: 16px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  width: 40%;
+}
+
+.search-btn {
+  border: none;
+  padding: 0.5em;
+  height: 50%;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  cursor: pointer;
+  color: #7e7873cb;
+  font-weight: 600;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  color: #585c65;
+  letter-spacing: 0.1em;
+}
+
+.search-input:focus {
+  outline: #ffffff;
 }
