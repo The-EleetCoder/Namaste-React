@@ -3,7 +3,7 @@ import { resObj } from "../utils/mockData";
 import { useEffect, useState } from "react";
 
 const Body = () => {
-  const [restaurantList, setRestaurantList] = useState(resObj.restaurants);
+  const [restaurantList, setRestaurantList] = useState([]);
 
   useEffect(()=>{
     fetchData();
