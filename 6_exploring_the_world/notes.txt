@@ -1,3 +1,4 @@
 Whenever we make an initial api call to load the data, we first render the skeleton on the page, till we get the data from api and as soon as we get it, we render again with the actual data.
 useEffect hook - if you have to do something after rendering the component, you have to do it inside useEffect hook.
 First the component is rendered, then the useEffect hook is called.
+Shimmer UI is a placeholder animation that mimics the layout and shapes of content that will eventually appear on a page while it's loading. It uses a gradient animation to create a shimmering effect over placeholders, giving the user a sense of motion and progress.
