@@ -25,7 +25,7 @@ const Body = () => {
     setRestaurantList(filteredList);
   };
 
-  return (restaurantList && restaurantList.length) == 0 ? (
+  return (restaurantList && restaurantList.length == 0) ? (
     <Shimmer />
   ) : (
     <div className="body">
