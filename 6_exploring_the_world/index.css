@@ -34,6 +34,7 @@ body {
   display: flex;
   list-style-type: none;
   gap: 2em;
+  align-items: center;
 }
 
 .search {
@@ -123,10 +124,10 @@ body {
   padding: 0.5em;
   height: 50%;
   border-radius: 0.3em;
-  background-color: #ff5c1c;
+  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   cursor: pointer;
-  color: #ffffff;
+  color: #7e7873cb;
   font-weight: 600;
 }
 
@@ -186,4 +187,16 @@ body {
   width: 50%;
   height: 1.2em;
   background-color: #eef0f5;
+}
+
+.login-btn{
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+  color: #ff5c1c;
+  font-weight: 600;
+  font-size: 16px;
 }
