@@ -1,0 +1,2 @@
+In useEffect, only the callback function is mandatory. The dependancy array is optional. If we call the useEffect hook without the dependancy array, its called everytime the corresponding component renders. But if we pass an empty array, useEffect is only called on the initial render(just once). Moreover, if we pass something in the dependancy array, the useEffect is called everytime that thing changes.
+For routing, we use react-router-dom.
