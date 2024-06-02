@@ -30,7 +30,7 @@ const Body = () => {
   const handleFilterByRating = () => {
     let filteredList = restaurantList.filter((res) => res?.info.avgRating > 4);
 
-    setRestaurantList(filteredList);
+    setFilteredRestaurant(filteredList);
   };
 
   const handleSearch = () => {
