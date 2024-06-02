@@ -5,4 +5,6 @@ And to provide the routing config to our app, we use RouterProvider.
 If the user goes to a random path that does not exists, then we can show him a error component by passing it into the errorElement property.
 We can use useRouteError (provided by react-router-dom) hook in the error component to show more info of the error.
 To render children components, we use <Outlet/> provided by react-router-dom. The outlet component is replaced by that particular child component on the respective route.
- 
+Now, if we want to link our headers to our page, we use Link (from react-router-dom). We can also use anchor tag, but that refreshes our entire app, so we dont prefer that.
+React is known as SPA, as there is only one page that renders and then afterwards, only the component changes.
+There are 2 types of routing - Server side routing and Client side routing. In server side routing, the requested page is fetched from the server and then shown to the client. In client side routing, when the app is loaded for the first time, it already has all the component code with it, so when the client requests for a particular page, that loads from the client side only. React has client side routing. 
