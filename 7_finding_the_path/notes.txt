@@ -4,3 +4,5 @@ Whenever we have to use routes, we have to create a routing configuration in our
 And to provide the routing config to our app, we use RouterProvider.
 If the user goes to a random path that does not exists, then we can show him a error component by passing it into the errorElement property.
 We can use useRouteError (provided by react-router-dom) hook in the error component to show more info of the error.
+To render children components, we use <Outlet/> provided by react-router-dom. The outlet component is replaced by that particular child component on the respective route.
+ 
