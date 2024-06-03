@@ -25,7 +25,7 @@ const RestaurantMenu = () => {
           (card) =>
             card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY &&
             card?.card?.card?.title == "Recommended"
-        )[0].card?.card?.itemCards
+        )[0]?.card?.card?.itemCards
       );
 
       setRestaurantData(json?.data?.cards[2]?.card?.card?.info);
@@ -50,6 +50,7 @@ const RestaurantMenu = () => {
           <div className="restaurant-menu-time">
             {restaurantData?.sla?.slaString}
           </div>
+          <hr className="restaurant-menu-line" />
           <div className="restaurant-menu-distance-fee">
             {`${restaurantData?.sla?.lastMileTravelString} | ₹${
               restaurantData?.feeDetails?.totalFee / 100

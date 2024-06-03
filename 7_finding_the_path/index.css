@@ -238,8 +238,7 @@ body {
   outline: #ffffff;
 }
 
-.restaurant-menu-wrapper{
-  background-color: aqua;
+.restaurant-menu-wrapper {
   margin-top: 7em;
   width: 100%;
   height: 100%;
@@ -247,51 +246,152 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
-.restaurant-menu-top-div{
+.restaurant-menu-top-div {
   display: flex;
-  background-color: antiquewhite;
   flex-direction: column;
   max-width: 800px;
   width: 100%;
-  padding: 1em;
-  gap: 1em;
-  border-radius: 1rem;
+  gap: 1.5em;
+  border-radius: 2rem;
+  background: linear-gradient(
+    rgb(255, 255, 255) -6.71%,
+    rgb(235, 235, 242) 176.19%,
+    rgb(223, 223, 231) 106.56%
+  );
+  padding: 0px 1em 1em;
 }
 
-.restaurant-menu-name{
-  font-weight: 800;
+.restaurant-menu-name {
+  font-weight: 600;
   font-size: 24px;
   letter-spacing: -0.4px;
 }
 
-.restaurant-menu-details{
+.restaurant-menu-details {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
-  padding: 1em;
+  padding: 1em 0em;
   border-radius: 1rem;
   gap: 0.2rem;
+  border: 1px solid rgba(2, 6, 12, 0.15);
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 16px 0px;
 }
 
-.restaurant-menu-rating{
+.restaurant-menu-rating {
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  padding: 0 1em;
 }
 
-.restaurant-menu-cuisines{
+.restaurant-menu-cuisines {
   font-weight: 600;
   color: #ff5c1c;
-  text-decoration-line:underline;
-  font-size: 15px;
+  text-decoration-line: underline;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  padding: 0 1em;
 }
 
-.restaurant-menu-time{
+.restaurant-menu-time {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  padding: 0 1em;
 }
 
-.restaurant-menu-distance-fee{
+.restaurant-menu-line {
+  overflow: visible;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  border: 1px solid rgb(240, 240, 245);
+}
+
+.restaurant-menu-distance-fee {
   color: #02060c99;
   font-size: 14px;
+  padding: 0 1em;
+}
+
+.restaurant-menu-bottom-div {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  max-width: 800px;
+  width: 100%;
+  gap: 1.5em;
+  padding: 1rem;
+}
+
+.restaurant-menu-card {
+  height: 202.8px;
+  display: flex;
+  border-bottom: 0.5px solid #d3d3d3;
+}
+
+.restaurant-menu-card-left {
+  /* background-color: antiquewhite; */
+  max-width: 552px;
+}
+
+.restaurant-menu-card-veg-nonveg {
+}
+
+.restaurant-menu-card-name {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.75);
+}
+
+.restaurant-menu-card-price {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.restaurant-menu-card-description {
+  margin-top: 1em;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.6);
+}
+
+.restaurant-menu-card-right {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.restaurant-menu-card-image {
+  position: relative;
+  width: 156px;
+  height: 144px;
+  border-radius: 1em;
+}
+
+.restaurant-menu-card-button {
+  position: absolute;
+  top: 7em;
+  right: 1em;
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(27, 166, 114);
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  height: 40px;
+  width: 120px;
+  box-shadow: rgba(40, 44, 63, 0.08) 0px 3px 8px;
 }

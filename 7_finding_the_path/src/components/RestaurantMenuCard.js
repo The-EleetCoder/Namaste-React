@@ -1,17 +1,34 @@
-import React from 'react'
+import React from "react";
+import { RESTAURANT_MENU_CARD_IMAGE_URL } from "../utils/constants";
 
-const RestaurantMenuCard = ({data}) => {
-            {/* return (
-          <div key={item?.card?.info?.id}>
-            {item?.card?.info?.name} :
-            {item?.card?.info?.defaultPrice == null
-              ? item?.card?.info?.price / 100
-              : item?.card?.info?.defaultPrice / 100}
-          </div>
-        ); */}
+const RestaurantMenuCard = ({ data }) => {
   return (
-    <div>RestaurantMenuCard</div>
-  )
-}
+    <div className="restaurant-menu-card">
+      <div className="restaurant-menu-card-left">
+        <div className="restaurant-menu-card-veg-nonveg">
+          {data?.isVeg ? "veg" : "non-veg"}
+        </div>
+        <div className="restaurant-menu-card-name">{data?.name}</div>
+        <div className="restaurant-menu-card-price">
+          ₹
+          {data?.defaultPrice == null
+            ? data?.price / 100
+            : data?.defaultPrice / 100}{" "}
+        </div>
+        <div className="restaurant-menu-card-description">
+          {data?.description}
+        </div>
+      </div>
 
-export default RestaurantMenuCard
+      <div className="restaurant-menu-card-right">
+        <img
+          className="restaurant-menu-card-image"
+          src={RESTAURANT_MENU_CARD_IMAGE_URL + data?.imageId}
+        />
+        <button className="restaurant-menu-card-button">ADD</button>
+      </div>
+    </div>
+  );
+};
+
+export default RestaurantMenuCard;
