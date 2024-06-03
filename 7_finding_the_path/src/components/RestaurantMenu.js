@@ -20,13 +20,33 @@ const RestaurantMenu = () => {
       const data = await fetch(RESTAURANT_MENU_API_URL + resId);
       const json = await data.json();
 
-      setRestaurantMenuList(
+      if (
         json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
           (card) =>
             card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY &&
             card?.card?.card?.title == "Recommended"
-        )[0]?.card?.card?.itemCards
-      );
+        ).length == 0
+      ) {
+        setRestaurantMenuList(
+          json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+            ?.filter(
+              (card) => card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY
+            )
+            .map((item) => item?.card?.card?.itemCards)
+            .flat()
+            .map((x) => x?.card?.info)
+        );
+      } else {
+        setRestaurantMenuList(
+          json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+            ?.filter(
+              (card) =>
+                card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY &&
+                card?.card?.card?.title == "Recommended"
+            )[0]
+            ?.card?.card?.itemCards.map((x) => x?.card?.info)
+        );
+      }
 
       setRestaurantData(json?.data?.cards[2]?.card?.card?.info);
     } catch (error) {
@@ -60,13 +80,8 @@ const RestaurantMenu = () => {
       </div>
 
       <div className="restaurant-menu-bottom-div">
-        {restaurantMenuList?.map((item) => {
-          return (
-            <RestaurantMenuCard
-              key={item?.card?.info?.id}
-              data={item?.card?.info}
-            />
-          );
+        {restaurantMenuList?.map((item, index) => {
+          return <RestaurantMenuCard key={index} data={item} />;
         })}
       </div>
     </div>

@@ -16,7 +16,7 @@ const RestaurantMenuCard = ({ data }) => {
             : data?.defaultPrice / 100}{" "}
         </div>
         <div className="restaurant-menu-card-description">
-          {data?.description.length>150 ? `${data?.description.substring(0, 150)}...` : data?.description}
+          {data?.description?.length>150 ? `${data?.description?.substring(0, 150)}...` : data?.description}
         </div>
       </div>
 
@@ -24,6 +24,7 @@ const RestaurantMenuCard = ({ data }) => {
         <img
           className="restaurant-menu-card-image"
           src={RESTAURANT_MENU_CARD_IMAGE_URL + data?.imageId}
+          alt="image"
         />
         <button className="restaurant-menu-card-button">ADD</button>
       </div>
