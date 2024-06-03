@@ -5,6 +5,7 @@ import {
   RESTAURANT_MENU_API_URL,
   RESTAURANT_MENU_TYPE_KEY,
 } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -56,12 +57,20 @@ const RestaurantMenu = () => {
     }
   };
 
+  if (restaurantMenuList.length == 0) {
+    return <Shimmer />;
+  }
+
   return (
     <div className="restaurant-menu-wrapper">
       <div className="restaurant-menu-top-div">
         <div className="restaurant-menu-name">{restaurantData?.name}</div>
         <div className="restaurant-menu-details">
           <div className="restaurant-menu-rating">
+            <img
+              className="restaurant-menu-rating-icon"
+              src="https://img.icons8.com/?size=100&id=enP6M_u0BXV3&format=png&color=1D923D"
+            />
             {`${restaurantData?.avgRating} (${restaurantData?.totalRatingsString})`}
           </div>
           <div className="restaurant-menu-cuisines">
@@ -72,6 +81,10 @@ const RestaurantMenu = () => {
           </div>
           <hr className="restaurant-menu-line" />
           <div className="restaurant-menu-distance-fee">
+            <img
+              className="restaurant-menu-distance-fee-image"
+              src="https://img.icons8.com/?size=100&id=GDiFk6WOVIf4&format=png&color=02060C99"
+            />
             {`${restaurantData?.sla?.lastMileTravelString} | ₹${
               restaurantData?.feeDetails?.totalFee / 100
             } delivery fee will apply`}

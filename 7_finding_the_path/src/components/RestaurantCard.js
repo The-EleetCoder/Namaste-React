@@ -21,7 +21,13 @@ const RestaurantCard = ({ data }) => {
       <div className="res-details">
         <p className="res-name">{name}</p>
         <div className="res-rating-time-div">
-          <p className="res-avg-rating">{avgRating}</p>
+          <p className="res-avg-rating">
+            <img
+              className="restaurant-menu-rating-icon"
+              src="https://img.icons8.com/?size=100&id=enP6M_u0BXV3&format=png&color=1D923D"
+            />
+            {avgRating}
+          </p>
           <p className="res-delivery-time">{sla.slaString}</p>
         </div>
         <p className="res-cuisine">{cuisine}</p>

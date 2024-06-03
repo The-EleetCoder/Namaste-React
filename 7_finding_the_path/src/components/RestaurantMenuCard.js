@@ -5,9 +5,14 @@ const RestaurantMenuCard = ({ data }) => {
   return (
     <div className="restaurant-menu-card">
       <div className="restaurant-menu-card-left">
-        <div className="restaurant-menu-card-veg-nonveg">
-          {data?.isVeg ? "veg" : "non-veg"}
-        </div>
+        <img
+          className="restaurant-menu-card-veg-nonveg"
+          src={
+            data?.isVeg
+              ? "https://img.icons8.com/?size=100&id=61083&format=png&color=000000"
+              : "https://img.icons8.com/?size=100&id=61082&format=png&color=000000"
+          }
+        />
         <div className="restaurant-menu-card-name">{data?.name}</div>
         <div className="restaurant-menu-card-price">
           ₹
@@ -16,7 +21,9 @@ const RestaurantMenuCard = ({ data }) => {
             : data?.defaultPrice / 100}{" "}
         </div>
         <div className="restaurant-menu-card-description">
-          {data?.description?.length>150 ? `${data?.description?.substring(0, 150)}...` : data?.description}
+          {data?.description?.length > 150
+            ? `${data?.description?.substring(0, 150)}...`
+            : data?.description}
         </div>
       </div>
 
