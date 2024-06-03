@@ -322,7 +322,6 @@ body {
 .restaurant-menu-bottom-div {
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
   max-width: 800px;
   width: 100%;
   gap: 1.5em;
@@ -333,11 +332,12 @@ body {
   height: 202.8px;
   display: flex;
   border-bottom: 0.5px solid #d3d3d3;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .restaurant-menu-card-left {
-  /* background-color: antiquewhite; */
-  max-width: 552px;
+  width: 552px;
 }
 
 .restaurant-menu-card-veg-nonveg {
@@ -345,21 +345,21 @@ body {
 
 .restaurant-menu-card-name {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: -0.3px;
   color: rgba(2, 6, 12, 0.75);
 }
 
 .restaurant-menu-card-price {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: -0.3px;
   color: rgba(2, 6, 12, 0.92);
 }
 
 .restaurant-menu-card-description {
   margin-top: 1em;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.3px;
   color: rgba(2, 6, 12, 0.6);
@@ -370,7 +370,6 @@ body {
   position: relative;
   justify-content: end;
   align-items: flex-start;
-  width: 100%;
 }
 
 .restaurant-menu-card-image {
