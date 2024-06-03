@@ -16,7 +16,7 @@ const RestaurantMenuCard = ({ data }) => {
             : data?.defaultPrice / 100}{" "}
         </div>
         <div className="restaurant-menu-card-description">
-          {data?.description}
+          {data?.description.length>150 ? `${data?.description.substring(0, 150)}...` : data?.description}
         </div>
       </div>
 
