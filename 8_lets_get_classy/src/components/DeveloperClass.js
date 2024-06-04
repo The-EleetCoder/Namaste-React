@@ -6,11 +6,13 @@ export default class DeveloperClass extends React.Component {
     console.log(props);
   }
   render() {
+    const { name, location, contact } = this.props;
     return (
-    <div>
-        <p>Name: {this.props.name}</p>
-        <p>Location: {}</p>
-        <p>Contact: {} </p>
-    </div>);
+      <div>
+        <p>Name: {name}</p>
+        <p>Location: {location}</p>
+        <p>Contact: {contact} </p>
+      </div>
+    );
   }
 }

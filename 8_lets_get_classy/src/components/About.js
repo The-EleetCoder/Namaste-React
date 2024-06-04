@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <div style={{ marginTop: "100px" }}>About</div>
-      <DeveloperClass name="Jai Jain" />
+      <DeveloperClass name="Jai Jain" location="Noida, UP" contact="jaijain.work@gmail.com" />
     </div>
   );
 };

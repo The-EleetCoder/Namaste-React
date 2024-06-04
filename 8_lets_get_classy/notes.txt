@@ -14,3 +14,4 @@ class myComponent extends React.Component {
 we have a render method which returns the jsx.
 To access the props, we call constructor(props). We also need to call super(props). In React, the super(props) method is used to call the constructor of the parent class. This is important because it allows the child class to access the properties and methods of the parent class.
 To use the props, we do this.props.propname
+whenever a new instance of a class is created, the constructor is called.
