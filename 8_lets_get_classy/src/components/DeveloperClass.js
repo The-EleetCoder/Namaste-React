@@ -8,6 +8,11 @@ export default class DeveloperClass extends React.Component {
       count: 0,
     };
   }
+
+  componentDidMount(){
+    // fetch data
+  }
+
   render() {
     const { name, location, contact } = this.props;
     const { count } = this.state;

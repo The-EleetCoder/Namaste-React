@@ -20,3 +20,9 @@ this.state is a large object that holds all the state variables.
 Never update state variables directly. Use this.setState({
     count: this.state.count + 1
 })
+
+Lifecycle :-
+first the constructor is called, then the render method is called, then componentDidMount is called.
+
+Api calls are made inside componentDidMount(), similar to useEffect in functional components. This is because, we want to quickly render our website once (so that the user sees something ex. Shimmer ui) before making an api call as fetching data is a time consuming process. Then when our wesite is rendered once, then we make the api call and after getting data successfully, we again render the website with the data.
+In react class components, there are two phases - Render phase and commit phase. First the render phase happens and then the commit phase begins. In the render phase the constructor is called, then the render method is called. This completes the render phase. Also, if a parent component has two children class components, then the render phase for both the children happens together, one after another, then the commit phase for both the children happens together.
