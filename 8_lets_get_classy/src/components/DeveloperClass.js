@@ -5,32 +5,32 @@ export default class DeveloperClass extends React.Component {
     super(props);
 
     this.state = {
-      count: 0,
+      userInfo: {
+        name: '',
+        location: '',
+        avatar_url: ''
+      }
     };
   }
 
-  componentDidMount(){
+  async componentDidMount() {
     // fetch data
+    const data = await fetch("https://api.github.com/users/The-EleetCoder");
+    const json = await data.json();
+
+    this.setState({
+      userInfo: json
+    })
   }
 
   render() {
-    const { name, location, contact } = this.props;
-    const { count } = this.state;
+    const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div>
-        <p>Count: {count}</p>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Count increase
-        </button>
+      <img src={avatar_url}/>
         <p>Name: {name}</p>
         <p>Location: {location}</p>
-        <p>Contact: {contact} </p>
+        <p>Contact: </p>
       </div>
     );
   }
