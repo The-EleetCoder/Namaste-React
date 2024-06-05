@@ -6,10 +6,10 @@ export default class DeveloperClass extends React.Component {
 
     this.state = {
       userInfo: {
-        name: '',
-        location: '',
-        avatar_url: ''
-      }
+        name: "",
+        location: "",
+        avatar_url: "",
+      },
     };
   }
 
@@ -19,15 +19,19 @@ export default class DeveloperClass extends React.Component {
     const json = await data.json();
 
     this.setState({
-      userInfo: json
-    })
+      userInfo: json,
+    });
+  }
+
+  componentDidUpdate() {
+    console.log("state variables updated with data from github!");
   }
 
   render() {
     const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div>
-      <img src={avatar_url}/>
+        <img src={avatar_url} />
         <p>Name: {name}</p>
         <p>Location: {location}</p>
         <p>Contact: </p>
