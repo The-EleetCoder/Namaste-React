@@ -1,4 +1,5 @@
 import React from "react";
+import Shimmer from "./Shimmer"
 
 export default class DeveloperClass extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export default class DeveloperClass extends React.Component {
     {
       console.log(followers, bio);
     }
-    return (
+    return (!name && !location && !avatar_url) ? <Shimmer/> :(
       <div className="github-div">
         <img className="github-div-left" src={avatar_url} />
         <div className="github-div-right">
