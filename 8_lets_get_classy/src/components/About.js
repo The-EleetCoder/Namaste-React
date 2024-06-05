@@ -3,13 +3,9 @@ import DeveloperClass from "./DeveloperClass";
 
 const About = () => {
   return (
-    <div>
-      <div style={{ marginTop: "100px" }}>About</div>
-      <DeveloperClass
-        name="Jai Jain"
-        location="Noida, UP"
-        contact="jaijain.work@gmail.com"
-      />
+    <div className="about-container">
+      <div className="about-text">About</div>
+      <DeveloperClass />
     </div>
   );
 };

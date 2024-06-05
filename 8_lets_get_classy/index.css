@@ -410,3 +410,83 @@ body {
   margin-bottom: -4px;
   margin-right: 3px;
 }
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.about-text{
+  font-weight: 700;
+  font-size: 150px;
+  color: #e4e1df47;
+  position: absolute;
+  top: 36rem;
+  right: -1rem;
+  user-select: none;
+}
+
+.github-div{
+  display: flex;
+  max-width: 1143px;
+  border-radius: 1rem;
+  gap: 2rem;
+  max-height: 400px;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.github-div-left{
+  height: 310px;
+  width: 310px;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  border: 2px solid #FC8120;
+}
+
+.github-div-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0 0 1rem 0rem;
+  /* border-left: 3px solid rgba(90, 90, 90, 0.119); */
+}
+
+.github-name{
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #000000b6;
+  display: flex;
+  justify-content: center;
+}
+
+.github-icons{
+  height: 20px;
+  width: 20px;
+  margin: 0 6px 2px 0;
+}
+
+.github-elements{
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #2323237f;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(175, 175, 175, 0.118);
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
