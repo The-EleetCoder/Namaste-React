@@ -22,9 +22,12 @@ Never update state variables directly. Use this.setState({
 })
 
 Lifecycle :-
+Hop to this url for better understanding : "https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/"
+
 There are Three phases in the lifecycle. Mounting phase, Updating phase and Un-mounting phase.
 In Mounting Phase, first the constructor is called, then the render method is called, then componentDidMount is called.
 When we call this.setState(), then the Updating phase begins. The render method is called, this time with the updated values from the api, and once this render is complete, then the componentDidUpdate() is called.
+Then just before we switch to another component, that is, just before our present component is removed from the dom, componentWillUnmount() is called. 
 
 Api calls are made inside componentDidMount(), similar to useEffect in functional components. This is because, we want to quickly render our website once (so that the user sees something ex. Shimmer ui) before making an api call as fetching data is a time consuming process. Then when our wesite is rendered once, then we make the api call and after getting data successfully, we again render the website with the data.
 In react class components, there are two phases - Render phase and commit phase. First the render phase happens and then the commit phase begins. In the render phase the constructor is called, then the render method is called. This completes the render phase. Also, if a parent component has two children class components, then the render phase for both the children happens together, one after another, then the commit phase for both the children happens together.

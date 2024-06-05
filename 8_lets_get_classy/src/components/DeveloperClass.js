@@ -27,6 +27,10 @@ export default class DeveloperClass extends React.Component {
     console.log("state variables updated with data from github!");
   }
 
+  componentWillUnmount() {
+    // just before this component getting removed or just before switching to another component, this will get called
+  }
+
   render() {
     const { name, location, avatar_url } = this.state.userInfo;
     return (
