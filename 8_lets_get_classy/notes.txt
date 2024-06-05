@@ -44,3 +44,8 @@ componentDidMOunt()
     render(APi data)
     <HTML (new API data>)
 componentDidUpdate()
+
+---- UnMounting ----
+componentWillUnmount()
+
+😮 One more thing about useEffect ---> we can also return a callback function from useEffect. And this function contains the code which we want to execute just before the component unmounts 🤯!
