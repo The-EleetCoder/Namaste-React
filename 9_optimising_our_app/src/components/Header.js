@@ -32,7 +32,7 @@ const Header = () => {
             <Link to="/">Cart</Link>
           </li>
           <button className="login-btn" onClick={handleLoginClick}>
-            {loginStatus} <p>{internetStatus == "online" ? "🟢" : "🔴"}</p>
+            {loginStatus} <p className="online-indicator">{internetStatus == "online" ? "🟢" : "🔴"}</p>
           </button>
         </ul>
       </div>

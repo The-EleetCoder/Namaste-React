@@ -531,3 +531,7 @@ body {
   font-size: 14px;
   color: #525252ec;
 }
+
+.online-indicator {
+  font-size: 8px;
+}
