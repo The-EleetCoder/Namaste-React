@@ -2,23 +2,21 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { LOCALHOST_RESTAURANT_DATA_URL } from "../utils/constants";
+import useInternetStatus from "../hooks/useInternetStatus";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const internetStatus = useInternetStatus();
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    // const data = await fetch(
-    //   "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    // );
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(LOCALHOST_RESTAURANT_DATA_URL);
     const json = await data.json();
     setRestaurantList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -40,6 +38,19 @@ const Body = () => {
     );
     setFilteredRestaurant(filteredList);
   };
+
+  if (internetStatus == "offline") {
+    return (
+      <div className="offline-wrapper">
+        <div className="offline-div">
+          <p className="offline-text-1">OOPS! Looks like you are offline.</p>
+          <p className="offline-text-2">
+            Please check your internet connection and try again.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return restaurantList && restaurantList.length == 0 ? (
     <Shimmer />

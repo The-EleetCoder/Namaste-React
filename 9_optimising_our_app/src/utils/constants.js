@@ -12,3 +12,9 @@ export const RESTAURANT_MENU_TYPE_KEY =
 
 export const RESTAURANT_MENU_CARD_IMAGE_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+
+export const LOCALHOST_RESTAURANT_DATA_URL =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+export const PRODUCTION_RESTAURANT_DATA_URL =
+  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
