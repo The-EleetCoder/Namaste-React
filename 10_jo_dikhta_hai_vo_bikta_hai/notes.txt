@@ -1,0 +1,1 @@
+In this episode, we just learned how to use Tailwind css in our project.
