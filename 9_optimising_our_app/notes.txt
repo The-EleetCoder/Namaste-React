@@ -1,0 +1,1 @@
+Its considered good practice to make a component such that it only has a single responsibility. In some cases, this couldn't be done, so we create custom hooks.
