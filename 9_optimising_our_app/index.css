@@ -199,6 +199,10 @@ body {
   color: #ff5c1c;
   font-weight: 600;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .search {
