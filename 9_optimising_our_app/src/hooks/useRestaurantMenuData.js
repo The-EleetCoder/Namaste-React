@@ -4,7 +4,7 @@ import {
   RESTAURANT_MENU_TYPE_KEY,
 } from "../utils/constants";
 
-const useRestaurantData = (resId) => {
+const useRestaurantMenuData = (resId) => {
   const [restaurantData, setRestaurantData] = useState(null);
   const [restaurantMenuList, setRestaurantMenuList] = useState([]);
 
@@ -56,4 +56,4 @@ const useRestaurantData = (resId) => {
   return [restaurantData, restaurantMenuList];
 };
 
-export default useRestaurantData;
+export default useRestaurantMenuData;

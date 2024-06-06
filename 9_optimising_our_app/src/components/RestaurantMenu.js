@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import RestaurantMenuCard from "./RestaurantMenuCard";
 import Shimmer from "./Shimmer";
-import useRestaurantData from "../hooks/useRestaurantData";
+import useRestaurantMenuData from "../hooks/useRestaurantMenuData";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const [restaurantData, restaurantMenuList] = useRestaurantData(resId);
+  const [restaurantData, restaurantMenuList] = useRestaurantMenuData(resId);
 
   if (restaurantMenuList.length == 0) {
     return <Shimmer />;
