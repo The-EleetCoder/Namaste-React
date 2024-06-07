@@ -53,7 +53,6 @@ body {
 }
 
 .res-card:hover {
-  transform: scale(0.95);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   cursor: pointer;
@@ -534,4 +533,27 @@ body {
 
 .online-indicator {
   font-size: 8px;
+}
+
+.withoffer-div {
+  position: relative;
+  transition: transform 0.15s ease;
+}
+
+.withoffer-text {
+  position: absolute;
+  font-weight: 700;
+  color: white;
+  font-size: 19px;
+  top: 8em;
+  left: 0.5em;
+  width: 93%;
+  border-radius: 0 0 1rem 1rem;
+  padding: 0.5rem 0.1rem 0 0.5rem;
+  z-index: 1;
+  background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
+}
+
+.withoffer-div:hover {
+  transform: scale(0.95);
 }

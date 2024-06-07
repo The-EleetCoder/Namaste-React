@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withOffer } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -52,6 +52,8 @@ const Body = () => {
     );
   }
 
+  const RestaurantCardWithOffer = withOffer(RestaurantCard);
+
   return restaurantList && restaurantList.length == 0 ? (
     <Shimmer />
   ) : (
@@ -81,7 +83,11 @@ const Body = () => {
               key={restaurant.info.id}
               to={"/restaurants/" + restaurant.info.id}
             >
-              <RestaurantCard data={restaurant} />
+              {restaurant.info.aggregatedDiscountInfoV3 != undefined ? (
+                <RestaurantCardWithOffer data={restaurant} />
+              ) : (
+                <RestaurantCard data={restaurant} />
+              )}
             </Link>
           );
         })}

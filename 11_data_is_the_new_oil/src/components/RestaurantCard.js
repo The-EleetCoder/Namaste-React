@@ -36,4 +36,19 @@ const RestaurantCard = ({ data }) => {
   );
 };
 
+// Higher order component
+export const withOffer = (RestaurantCard) => {
+  return ({ data }) => {
+    const { header, subHeader } = data.info.aggregatedDiscountInfoV3;
+    return (
+      <div className="withoffer-div">
+        <div className="withoffer-text">{`${
+          header != undefined ? header : ""
+        } ${subHeader != undefined ? subHeader : ""}`}</div>
+        <RestaurantCard data={data} />
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;

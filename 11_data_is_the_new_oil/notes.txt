@@ -1,0 +1,4 @@
+A higher-order component (HOC) is a function that takes a component as an argument and returns a new component. HOCs are a way to reuse component logic, such as authentication, routing, or state management, across multiple components.
+HOCs are often used to add additional functionality to a component without modifying the component's code. For example, you can use a HOC to add authentication or routing capabilities to a component or to apply a specific style or behavior to multiple components.
+HOCs can also be used to create new components from existing components. For example, you can use a HOC to create a new component that is a wrapper around a button component that adds additional functionality, such as tracking clicks or disabling the button when it is loading data.
+Created a HOC - 'withoffer' in RestaurantCard component.
