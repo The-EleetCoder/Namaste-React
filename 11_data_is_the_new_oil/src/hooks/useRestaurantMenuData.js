@@ -17,34 +17,11 @@ const useRestaurantMenuData = (resId) => {
       const data = await fetch(RESTAURANT_MENU_API_URL + resId);
       const json = await data.json();
 
-      if (
+      setRestaurantMenuList(
         json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-          (card) =>
-            card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY &&
-            card?.card?.card?.title == "Recommended"
-        ).length == 0
-      ) {
-        setRestaurantMenuList(
-          json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-            ?.filter(
-              (card) => card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY
-            )
-            .map((item) => item?.card?.card?.itemCards)
-            .flat()
-            .map((x) => x?.card?.info)
-        );
-      } else {
-        setRestaurantMenuList(
-          json?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-            ?.filter(
-              (card) =>
-                card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY &&
-                card?.card?.card?.title == "Recommended"
-            )[0]
-            ?.card?.card?.itemCards.map((x) => x?.card?.info)
-        );
-      }
-
+          (card) => card?.card?.card["@type"] == RESTAURANT_MENU_TYPE_KEY
+        )
+      );
       setRestaurantData(json?.data?.cards[2]?.card?.card?.info);
     } catch (error) {
       setRestaurantData(null);

@@ -327,8 +327,6 @@ body {
   flex-direction: column;
   max-width: 800px;
   width: 100%;
-  gap: 1.5em;
-  padding: 1rem;
 }
 
 .restaurant-menu-card {
@@ -556,4 +554,42 @@ body {
 
 .withoffer-div:hover {
   transform: scale(0.95);
+}
+
+.accordian {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordian-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1rem 1rem 1rem 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordian-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.803);
+}
+
+.accordian-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.accordian-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.accordian-hr {
+  height: 1rem;
+  background-color: #f2f2f3;
+  border: none;
+  margin: -0.1rem 0rem 1rem 0rem;
 }
