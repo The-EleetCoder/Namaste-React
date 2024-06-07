@@ -60,7 +60,7 @@ const RestaurantMenu = () => {
                 className="accordian-header"
                 onClick={() => handleAccordianClick(index)}
               >
-                <div className="accordian-name">{item?.card?.card?.title}</div>
+                <div className="accordian-name">{`${item?.card?.card?.title} (${item?.card?.card?.itemCards?.length})`}</div>
                 <img
                   className="accordian-icon"
                   src={`https://img.icons8.com/?size=100&id=${
@@ -71,7 +71,7 @@ const RestaurantMenu = () => {
 
               {showIndexItems == index && (
                 <div className="accordian-items">
-                  {item.card?.card?.itemCards.map((item, index) => {
+                  {item?.card?.card?.itemCards.map((item, index) => {
                     return (
                       <RestaurantMenuCard key={index} data={item?.card?.info} />
                     );
