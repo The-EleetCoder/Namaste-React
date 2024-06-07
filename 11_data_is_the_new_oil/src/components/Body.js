@@ -27,14 +27,14 @@ const Body = () => {
   };
 
   const handleFilterByRating = () => {
-    let filteredList = restaurantList.filter((res) => res?.info.avgRating > 4);
+    let filteredList = restaurantList?.filter((res) => res?.info?.avgRating > 4);
 
     setFilteredRestaurant(filteredList);
   };
 
   const handleSearch = () => {
-    const filteredList = restaurantList.filter((res) =>
-      res.info.name.toLowerCase().includes(searchText.toLowerCase())
+    const filteredList = restaurantList?.filter((res) =>
+      res?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilteredRestaurant(filteredList);
   };
@@ -54,7 +54,7 @@ const Body = () => {
 
   const RestaurantCardWithOffer = withOffer(RestaurantCard);
 
-  return restaurantList && restaurantList.length == 0 ? (
+  return restaurantList && restaurantList?.length == 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -81,9 +81,9 @@ const Body = () => {
           return (
             <Link
               key={restaurant.info.id}
-              to={"/restaurants/" + restaurant.info.id}
+              to={"/restaurants/" + restaurant?.info?.id}
             >
-              {restaurant.info.aggregatedDiscountInfoV3 != undefined ? (
+              {restaurant?.info?.aggregatedDiscountInfoV3 != undefined ? (
                 <RestaurantCardWithOffer data={restaurant} />
               ) : (
                 <RestaurantCard data={restaurant} />
