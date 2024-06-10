@@ -9,7 +9,8 @@ const Header = () => {
   const { loginStatus, setLoginStatus } = useContext(AppContext);
   const internetStatus = useInternetStatus("online");
 
-  const cartItems = useSelector((store)=>store.cart.items) 
+  const cartItems = useSelector((store)=>store.cart.items);
+  console.log(cartItems)
 
   const handleLoginClick = () => {
     setLoginStatus(loginStatus == "Login" ? "Logout" : "Login");
@@ -33,7 +34,7 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li>
-            <Link to="/">Cart ({cartItems.length})</Link>
+            <Link to="/cart">Cart ({cartItems.length})</Link>
           </li>
           <button className="login-btn" onClick={handleLoginClick}>
             {loginStatus}{" "}

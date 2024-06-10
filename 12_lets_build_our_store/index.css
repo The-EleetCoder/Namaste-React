@@ -593,3 +593,32 @@ body {
   border: none;
   margin: -0.1rem 0rem 1rem 0rem;
 }
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-name{
+  width: 100%;
+  max-width: 800px;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #f4f4f48b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #4a4744f1;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.cart-items{
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+
