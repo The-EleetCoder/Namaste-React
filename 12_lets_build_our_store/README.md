@@ -22,3 +22,11 @@ And this phenomenon is known as <b>subscribing to the store</b>. So our header c
 Summary :
 
 <img src="./images/image4.png" alt="alt text" height="300" width="600">
+
+## Steps :
+
+1) Install `@reactjs/toolkit` and `react-redux`.
+2) Build the store.
+3) Connect the store to the app, using provider.
+4) Create required slice/slices.
+5) subscribing to the store.
