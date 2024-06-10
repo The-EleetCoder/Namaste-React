@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useContext } from "react";
 import useInternetStatus from "../hooks/useInternetStatus";
+import { AppContext } from "../context/AppContext";
 
 const Header = () => {
-  const [loginStatus, setLoginStatus] = useState("Login");
+  const { loginStatus, setLoginStatus } = useContext(AppContext);
   const internetStatus = useInternetStatus("online");
 
   const handleLoginClick = () => {
@@ -32,7 +33,10 @@ const Header = () => {
             <Link to="/">Cart</Link>
           </li>
           <button className="login-btn" onClick={handleLoginClick}>
-            {loginStatus} <p className="online-indicator">{internetStatus == "online" ? "🟢" : "🔴"}</p>
+            {loginStatus}{" "}
+            <p className="online-indicator">
+              {internetStatus == "online" ? "🟢" : "🔴"}
+            </p>
           </button>
         </ul>
       </div>
