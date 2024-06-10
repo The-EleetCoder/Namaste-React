@@ -18,3 +18,7 @@ We will use something known as a <b>selector</b>, to read the data from the stor
 And this phenomenon is known as <b>subscribing to the store</b>. So our header component has subscribed to the store, i.e., its in sync with the store. And it has subscribed to the store using a selector.
 
 <img src="./images/image3.png" alt="alt text" height="300" width="600">
+
+Summary :
+
+<img src="./images/image4.png" alt="alt text" height="300" width="600">
