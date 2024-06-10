@@ -3,10 +3,13 @@ import { LOGO_URL } from "../utils/constants";
 import { useContext } from "react";
 import useInternetStatus from "../hooks/useInternetStatus";
 import { AppContext } from "../context/AppContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const { loginStatus, setLoginStatus } = useContext(AppContext);
   const internetStatus = useInternetStatus("online");
+
+  const cartItems = useSelector((store)=>store.cart.items) 
 
   const handleLoginClick = () => {
     setLoginStatus(loginStatus == "Login" ? "Logout" : "Login");
@@ -30,7 +33,7 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li>
-            <Link to="/">Cart</Link>
+            <Link to="/">Cart ({cartItems.length})</Link>
           </li>
           <button className="login-btn" onClick={handleLoginClick}>
             {loginStatus}{" "}

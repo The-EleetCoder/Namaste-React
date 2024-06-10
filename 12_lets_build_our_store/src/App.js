@@ -7,18 +7,22 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { AppContextProvider } from "./context/AppContext";
+import { Provider } from "react-redux";
+import appStore from "./redux/store/appStore";
 
 // lazy loading the about us component
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
   return (
-    <AppContextProvider>
-      <div className="app">
-        <Header />
-        <Outlet />
-      </div>
-    </AppContextProvider>
+    <Provider store={appStore}>
+      <AppContextProvider>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </AppContextProvider>
+    </Provider>
   );
 };
 

@@ -25,8 +25,8 @@ Summary :
 
 ## Steps :
 
-1) Install `@reactjs/toolkit` and `react-redux`.
-2) Build the store.
+1) Install `@reduxjs/toolkit` and `react-redux`.
+2) Build the store (using configureStore()).
 3) Connect the store to the app, using provider.
 4) Create required slice/slices.
-5) subscribing to the store.
+5) subscribing to the store using selectors.
