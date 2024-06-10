@@ -4,12 +4,11 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
 
 const RestaurantMenuCard = ({ data }) => {
-
   const dispatch = useDispatch();
 
   const handleAddClick = (data) => {
-    dispatch(addItem(data))
-  }
+    dispatch(addItem(data));
+  };
 
   return (
     <div className="restaurant-menu-card">
@@ -42,7 +41,12 @@ const RestaurantMenuCard = ({ data }) => {
           src={RESTAURANT_MENU_CARD_IMAGE_URL + data?.imageId}
           alt="image"
         />
-        <button className="restaurant-menu-card-button" onClick={() => handleAddClick(data)}>ADD</button>
+        <button
+          className="restaurant-menu-card-button"
+          onClick={() => handleAddClick(data)}
+        >
+          ADD
+        </button>
       </div>
     </div>
   );

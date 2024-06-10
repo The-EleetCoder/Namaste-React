@@ -27,7 +27,9 @@ const Body = () => {
   };
 
   const handleFilterByRating = () => {
-    let filteredList = restaurantList?.filter((res) => res?.info?.avgRating > 4);
+    let filteredList = restaurantList?.filter(
+      (res) => res?.info?.avgRating > 4
+    );
 
     setFilteredRestaurant(filteredList);
   };

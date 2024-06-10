@@ -14,7 +14,7 @@ When you click on the add button, it dispaches an action, which calls a reducer 
 <img src="./images/image2.png" alt="alt text" height="300" width="600">
 
 Now this was about how to write data in the slice. But how do we actually read the data inside the slice?  
-We will use something known as a <b>selector</b>, to read the data from the store and modify the react component.   
+We will use something known as a <b>selector</b>, to read the data from the store and modify the react component.  
 And this phenomenon is known as <b>subscribing to the store</b>. So our header component has subscribed to the store, i.e., its in sync with the store. And it has subscribed to the store using a selector.
 
 <img src="./images/image3.png" alt="alt text" height="300" width="600">
@@ -25,8 +25,8 @@ Summary :
 
 ## Steps :
 
-1) Install `@reduxjs/toolkit` and `react-redux`.
-2) Build the store (using configureStore()).
-3) Connect the store to the app, using provider.
-4) Create required slice/slices.
-5) subscribing to the store using selectors.
+1. Install `@reduxjs/toolkit` and `react-redux`.
+2. Build the store (using configureStore()).
+3. Connect the store to the app, using provider.
+4. Create required slice/slices.
+5. subscribing to the store using selectors.
