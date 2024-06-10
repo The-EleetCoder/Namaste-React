@@ -1,0 +1,29 @@
+A higher-order component (HOC) is a function that takes a component as an argument and returns a new component. HOCs are a way to reuse component logic, such as authentication, routing, or state management, across multiple components.
+HOCs are often used to add additional functionality to a component without modifying the component's code. For example, you can use a HOC to add authentication or routing capabilities to a component or to apply a specific style or behavior to multiple components.
+HOCs can also be used to create new components from existing components. For example, you can use a HOC to create a new component that is a wrapper around a button component that adds additional functionality, such as tracking clicks or disabling the button when it is loading data.
+Created a HOC - 'withoffer' in RestaurantCard component.
+Prop drilling in React refers to the practice of passing props from a parent component to a child component, and then passing those same props down to another child component, and so on, until the props reach the component that needs them. This can make code difficult to read and maintain, as it can be hard to track where props are coming from and where they are going.
+There are a few ways to avoid prop drilling. One way is to use React's context API. The context API allows you to provide data to any component in the component tree, regardless of how deeply nested it is. This can be useful for data that needs to be accessed by many different components.
+Another way to avoid prop drilling is to use a state management library like Redux. Redux provides a centralized store for managing the state of your application. This can be helpful for data that needs to be accessed by many different components, and that needs to be updated frequently.
+
+🟢This is how to use Context API
+create a file as AppContext.js
+
+import { createContext, useState } from "react";
+
+// creating the context
+export const AppContext = createContext();
+
+// creating the provider
+export const AppContextProvider = ({ children }) => {
+  const [loginStatus, setLoginStatus] = useState("Login");
+
+  const value = {
+    loginStatus,
+    setLoginStatus,
+  };
+
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};
+
+// now just wrap the app in this provider and you are free to use it anywhere inside the app 😎
