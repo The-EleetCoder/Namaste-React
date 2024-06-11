@@ -2,7 +2,7 @@ import RestaurantCard, { withOffer } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import { PRODUCTION_RESTAURANT_DATA_URL } from "../utils/constants";
+import { LOCALHOST_RESTAURANT_DATA_URL } from "../utils/constants";
 import useInternetStatus from "../hooks/useInternetStatus";
 
 const Body = () => {
@@ -16,7 +16,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(PRODUCTION_RESTAURANT_DATA_URL);
+    const data = await fetch(LOCALHOST_RESTAURANT_DATA_URL);
     const json = await data.json();
     setRestaurantList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants

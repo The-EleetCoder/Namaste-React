@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  PRODUCTION_RESTAURANT_MENU_API_URL,
+  RESTAURANT_MENU_API_URL,
   RESTAURANT_MENU_TYPE_KEY,
 } from "../utils/constants";
 
@@ -14,7 +14,7 @@ const useRestaurantMenuData = (resId) => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(PRODUCTION_RESTAURANT_MENU_API_URL + resId);
+      const data = await fetch(RESTAURANT_MENU_API_URL + resId);
       const json = await data.json();
 
       setRestaurantMenuList(
