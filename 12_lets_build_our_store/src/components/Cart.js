@@ -12,8 +12,11 @@ const Cart = () => {
 
   if (cartItems?.length == 0) {
     return (
-      <div className="empty-cart-msg" style={{ marginTop: "6rem" }}>
-        Please add some items!
+      <div className="empty-cart-msg">
+        <img
+          alt="Empty Cart"
+          src="https://cdn-icons-png.freepik.com/512/11329/11329060.png"
+        />
       </div>
     );
   }
