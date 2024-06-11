@@ -629,3 +629,30 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+.header-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-cart-image {
+  width: 40px;
+  height: 40px;
+}
+
+.header-cart-count {
+  position: absolute;
+  font-size: 14px;
+  background-color: #34bc15;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -0.01rem;
+  left: 1.5rem;
+  color: #ffffff;
+}
