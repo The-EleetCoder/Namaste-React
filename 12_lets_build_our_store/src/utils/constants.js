@@ -7,6 +7,9 @@ export const LOGO_URL =
 export const RESTAURANT_MENU_API_URL =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=";
 
+export const PRODUCTION_RESTAURANT_MENU_API_URL =
+  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=";
+
 export const RESTAURANT_MENU_TYPE_KEY =
   "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 

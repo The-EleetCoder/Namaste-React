@@ -30,8 +30,8 @@ const Cart = () => {
         Empty Cart
       </button>
       <div className="cart-items">
-        {cartItems?.map((item) => {
-          return <RestaurantMenuCard data={item} />;
+        {cartItems?.map((item, index) => {
+          return <RestaurantMenuCard data={item} key={index} />;
         })}
       </div>
     </div>
