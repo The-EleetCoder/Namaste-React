@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <Link to="/">
+          <img className="logo" src={LOGO_URL} />
+        </Link>
       </div>
 
       <div className="nav-items">
@@ -33,7 +35,10 @@ const Header = () => {
           <li>
             <Link to="/cart">
               <div className="header-cart">
-                <img src="https://img.icons8.com/?size=100&id=59997&format=png&color=3C3C3CD9" className="header-cart-image" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=59997&format=png&color=3C3C3CD9"
+                  className="header-cart-image"
+                />
                 <div className="header-cart-count">{cartItems.length}</div>
               </div>
             </Link>
